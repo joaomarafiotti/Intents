@@ -1,41 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <include
-        android:id="@+id/toolbar_in"
-        layout="@layout/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/toolbarIn"
+        layout="@layout/toolbar" />
 
-    <TextView
-        android:id="@+id/parameter_tv"
+    <EditText
+        android:id="@+id/parameterTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Initial value"
-        android:textSize="25sp"
-        android:layout_margin="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_in" />
+        android:hint="Digite um parâmetro" />
 
     <Button
-        android:id="@+id/parameter_bt"
-        android:layout_width="match_parent"
+        android:id="@+id/parameterBt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="@string/open_activity_with_explicit_intent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/parameter_tv" />
+        android:text="Enviar para ParameterActivity" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

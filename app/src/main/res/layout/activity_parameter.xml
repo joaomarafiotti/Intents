@@ -1,45 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parameterLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ParameterActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <include
-        android:id="@+id/toolbar_in"
-        layout="@layout/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/toolbarIn"
+        layout="@layout/toolbar" />
 
     <EditText
-        android:id="@+id/parameter_et"
+        android:id="@+id/parameterEt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/parameter"
-        android:textSize="25sp"
-        android:layout_margin="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_in" />
+        android:hint="Editar parâmetro" />
 
     <Button
-        android:id="@+id/return_and_close_bt"
-        android:layout_width="match_parent"
+        android:id="@+id/returnAndCloseBt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Return and close"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/parameter_et" />
+        android:text="Devolver e fechar" />
 
-
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

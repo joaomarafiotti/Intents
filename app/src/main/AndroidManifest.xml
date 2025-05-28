@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-feature
-        android:name="android.hardware.telephony"
-        android:required="false"/>
+    <!-- Permissões necessárias -->
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
@@ -18,23 +17,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Intents"
         tools:targetApi="31">
+
+        <!-- ParameterActivity com Intent-Filter -->
         <activity
-            android:name=".ParameterActivity"
+            android:name="intents.ParameterActivity"
             android:exported="false">
             <intent-filter>
                 <action android:name="OPEN_PARAMETER_ACTIVITY_ACTION" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <!-- MainActivity como Launcher -->
         <activity
-            android:name=".MainActivity"
+            android:name="intents.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

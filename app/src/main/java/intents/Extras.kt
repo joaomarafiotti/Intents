@@ -1,4 +1,4 @@
-package br.edu.ifsp.scl.bes.prdm.intents
+package intents
 
 object Extras {
     const val PARAMETER_EXTRA = "PARAMETER"
